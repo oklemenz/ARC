@@ -1,0 +1,5 @@
+Release Notes:
+v1.1
+- Updates RealisticEngineSounds_assets unity asset package to support RES v1.1
+- Fixed some wav files looping
+- Removed pluck noises

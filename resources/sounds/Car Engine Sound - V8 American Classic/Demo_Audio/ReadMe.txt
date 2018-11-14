@@ -1,0 +1,2 @@
+This recorded demo sounds was generated with "Realistic Engine Sounds" unity asset, using the wav files from this package. You can download Lite version of that script here:
+https://www.assetstore.unity3d.com/en/#!/content/94797

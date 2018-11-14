@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Status View Controller-->
+        <scene sceneID="5Tw-8P-01p">
+            <objects>
+                <viewController id="ri3-7p-e6d" customClass="StatusViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RAa-Gm-0Pa">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="85"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="1uT-CF-YpX" userLabel="Message Panel">
+                                <rect key="frame" x="16" y="20" width="125" height="32"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SfJ-mv-Jb9">
+                                    <rect key="frame" x="0.0" y="0.0" width="125" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ac7-7y-dTM">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="33"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="d6V-vA-DSm">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="250" text="Tracking status" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6b-bh-aZK" userLabel="Messages label">
+                                                        <rect key="frame" x="16" y="8" width="93" height="16"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                        <nil key="textColor"/>
+                                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="x6b-bh-aZK" firstAttribute="top" secondItem="d6V-vA-DSm" secondAttribute="top" constant="8" id="GRD-sO-Xxr"/>
+                                                    <constraint firstItem="x6b-bh-aZK" firstAttribute="leading" secondItem="d6V-vA-DSm" secondAttribute="leading" constant="16" id="Hsf-fL-1W0"/>
+                                                    <constraint firstItem="x6b-bh-aZK" firstAttribute="trailing" secondItem="d6V-vA-DSm" secondAttribute="trailing" constant="-16" id="a6Z-yA-neT"/>
+                                                    <constraint firstItem="x6b-bh-aZK" firstAttribute="centerY" secondItem="d6V-vA-DSm" secondAttribute="centerY" id="rVg-YG-d1k"/>
+                                                </constraints>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="extraLight"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Ac7-7y-dTM" secondAttribute="trailing" id="aEM-lA-5rI"/>
+                                        <constraint firstItem="Ac7-7y-dTM" firstAttribute="top" secondItem="SfJ-mv-Jb9" secondAttribute="top" id="bB0-lR-gq4"/>
+                                        <constraint firstItem="Ac7-7y-dTM" firstAttribute="leading" secondItem="SfJ-mv-Jb9" secondAttribute="leading" id="uwW-gW-Owb"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="x6b-bh-aZK" secondAttribute="bottom" constant="8" id="2kJ-Kd-oZv"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSK-t0-G4r" userLabel="Restart Experience Button Icon">
+                                <rect key="frame" x="623" y="0.0" width="44" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="0Aj-uI-nvb"/>
+                                    <constraint firstAttribute="width" constant="44" id="AJj-0E-eVh"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="12"/>
+                                <state key="normal" image="refresh"/>
+                                <state key="selected" image="refresh_pressed"/>
+                                <state key="highlighted" image="refresh_pressed"/>
+                                <connections>
+                                    <action selector="restartExperience:" destination="BV1-FR-VrT" eventType="touchUpInside" id="64U-We-Liv"/>
+                                    <action selector="restartExperience:" destination="ri3-7p-e6d" eventType="touchUpInside" id="g0X-9j-zRG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aSK-t0-G4r" firstAttribute="top" secondItem="wYK-n4-ypp" secondAttribute="top" id="00T-V7-ZZG"/>
+                            <constraint firstItem="aSK-t0-G4r" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1uT-CF-YpX" secondAttribute="trailing" constant="8" id="7s3-gZ-Vdh"/>
+                            <constraint firstItem="wYK-n4-ypp" firstAttribute="trailing" secondItem="aSK-t0-G4r" secondAttribute="trailing" id="AKH-fs-H3Q"/>
+                            <constraint firstItem="1uT-CF-YpX" firstAttribute="leading" secondItem="wYK-n4-ypp" secondAttribute="leading" constant="16" id="EfQ-ka-33s"/>
+                            <constraint firstItem="1uT-CF-YpX" firstAttribute="top" secondItem="aSK-t0-G4r" secondAttribute="top" constant="20" id="J9G-Za-9yG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wYK-n4-ypp"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="x6b-bh-aZK" id="103-E5-rNP"/>
+                        <outlet property="messagePanel" destination="1uT-CF-YpX" id="taj-MT-abc"/>
+                        <outlet property="restartExperienceButton" destination="aSK-t0-G4r" id="T3U-OD-TP3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9h-Vm-ZUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="98"/>
+        </scene>
+        <!--Delegate-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RLh-bf-1c3">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" wantsMultisampling="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E6c-py-dvH" customClass="VirtualObjectARView" customModule="ARC" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </sceneKitView>
+                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5W-V8-6lY">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AjQ-5W-To9">
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnx-rc-95S">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="z9S-1J-UzK"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="ri3-7p-e6d" kind="embed" id="uiU-1f-e8S"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXI-rG-2YG" customClass="AnalogJoystick" customModule="ARC" customModuleProvider="target">
+                                <rect key="frame" x="10" y="265" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qXI-rG-2YG" secondAttribute="height" multiplier="1:1" id="7cN-oK-ua8"/>
+                                    <constraint firstAttribute="width" constant="100" id="Cie-bT-s0j"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="direction" value="vertical"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="analogstick_background_left"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="backgroundSize">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="analogstick_button"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonSize">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxDistance">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="scalePosition">
+                                        <point key="value" x="0.0" y="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="buttonOffset">
+                                        <point key="value" x="0.5" y="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fitSize" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BV1-FR-VrT" id="FeL-sb-44a"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QeR-xU-ScN" customClass="AnalogJoystick" customModule="ARC" customModuleProvider="target">
+                                <rect key="frame" x="557" y="265" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="SuQ-wl-Jyx"/>
+                                    <constraint firstAttribute="width" secondItem="QeR-xU-ScN" secondAttribute="height" multiplier="1:1" id="hGV-i3-ItU"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="direction" value="horizontal"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="analogstick_background_right"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="backgroundSize">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="analogstick_button"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonSize">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxDistance">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="scalePosition">
+                                        <point key="value" x="1" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="buttonOffset">
+                                        <point key="value" x="0.5" y="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fitSize" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BV1-FR-VrT" id="AZw-sa-rsq"/>
+                                </connections>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u5d-u1-dah">
+                                <rect key="frame" x="20" y="105.5" width="48" height="164"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gK-0P-GaW" customClass="BlurButton" customModule="ARC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                        <state key="normal" image="barrier" backgroundImage="ring"/>
+                                        <state key="selected" backgroundImage="ring_pressed"/>
+                                        <state key="highlighted" backgroundImage="ring_pressed"/>
+                                        <connections>
+                                            <action selector="addBarrierButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="9Gg-Ra-tPw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOm-hO-j1q" customClass="BlurButton" customModule="ARC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="58" width="48" height="48"/>
+                                        <state key="normal" image="tire" backgroundImage="ring"/>
+                                        <state key="selected" backgroundImage="ring_pressed"/>
+                                        <state key="highlighted" backgroundImage="ring_pressed"/>
+                                        <connections>
+                                            <action selector="addTireButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="6Xy-ha-ejj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8Q-uN-sh8" customClass="BlurButton" customModule="ARC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="116" width="48" height="48"/>
+                                        <state key="normal" image="cone" backgroundImage="ring"/>
+                                        <state key="selected" backgroundImage="ring_pressed"/>
+                                        <state key="highlighted" backgroundImage="ring_pressed"/>
+                                        <connections>
+                                            <action selector="addConeButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="0WS-eY-G9Q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OtC-a3-AN3">
+                                <rect key="frame" x="599" y="105.5" width="48" height="164"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K85-Ls-qn5" customClass="BlurButton" customModule="ARC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                        <state key="normal" image="remove_template" backgroundImage="ring"/>
+                                        <state key="selected" image="remove_template_active" backgroundImage="ring"/>
+                                        <state key="highlighted" image="remove_template_pressed" backgroundImage="ring_pressed"/>
+                                        <connections>
+                                            <action selector="removeObjectButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="vWy-pG-QAv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M42-7w-UCI" customClass="BlurButton" customModule="ARC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="58" width="48" height="48"/>
+                                        <state key="normal" image="race" backgroundImage="ring"/>
+                                        <state key="selected" image="race_active"/>
+                                        <state key="highlighted" image="race" backgroundImage="ring_pressed"/>
+                                        <connections>
+                                            <action selector="switchRaceButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="iMA-WF-EEy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kG-Wf-Xjq" customClass="BlurButton" customModule="ARC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="116" width="48" height="48"/>
+                                        <state key="normal" image="sound" backgroundImage="ring"/>
+                                        <state key="selected" image="mute_active"/>
+                                        <state key="highlighted" image="mute" backgroundImage="ring_pressed"/>
+                                        <connections>
+                                            <action selector="switchMuteSoundButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="TiL-0M-8n2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="k9G-sQ-3KG">
+                                <rect key="frame" x="270.5" y="284" width="126" height="71"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ivb-My-77Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="71"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08c-w9-fAW" customClass="BlurButton" customModule="ARC" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                <state key="normal" image="defender" backgroundImage="ring"/>
+                                                <state key="selected" image="defender_active"/>
+                                                <state key="highlighted" image="defender" backgroundImage="ring_pressed"/>
+                                                <connections>
+                                                    <action selector="defenderCarButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="T60-hH-Vse"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2WD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTk-vh-1Hi">
+                                                <rect key="frame" x="0.0" y="53" width="48" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bby-eK-Cgf">
+                                        <rect key="frame" x="78" y="0.0" width="48" height="71"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCM-co-qpH" customClass="BlurButton" customModule="ARC" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                <state key="normal" image="avenger" backgroundImage="ring"/>
+                                                <state key="selected" image="avenger_active" backgroundImage="ring"/>
+                                                <state key="highlighted" image="avenger" backgroundImage="ring_pressed"/>
+                                                <connections>
+                                                    <action selector="avengerCarButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="x7c-Ky-so2"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4WD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSl-5Q-ctI">
+                                                <rect key="frame" x="0.0" y="53" width="48" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GBj-4O-Whc" firstAttribute="bottom" secondItem="qXI-rG-2YG" secondAttribute="bottom" constant="10" id="2Vm-4I-7Lw"/>
+                            <constraint firstItem="qXI-rG-2YG" firstAttribute="leading" secondItem="GBj-4O-Whc" secondAttribute="leading" constant="10" id="31I-tT-FCx"/>
+                            <constraint firstItem="GBj-4O-Whc" firstAttribute="bottom" secondItem="QeR-xU-ScN" secondAttribute="bottom" constant="10" id="FlV-dm-2oQ"/>
+                            <constraint firstAttribute="trailing" secondItem="R5W-V8-6lY" secondAttribute="trailing" id="J42-1v-Ihf"/>
+                            <constraint firstItem="GBj-4O-Whc" firstAttribute="trailing" secondItem="OtC-a3-AN3" secondAttribute="trailing" constant="20" id="QNc-cF-97c"/>
+                            <constraint firstItem="tnx-rc-95S" firstAttribute="top" secondItem="GBj-4O-Whc" secondAttribute="top" id="Sdx-fT-fqG"/>
+                            <constraint firstItem="R5W-V8-6lY" firstAttribute="leading" secondItem="RLh-bf-1c3" secondAttribute="leading" id="Yj0-Fo-B5n"/>
+                            <constraint firstItem="E6c-py-dvH" firstAttribute="top" secondItem="RLh-bf-1c3" secondAttribute="top" id="boO-ZZ-neH"/>
+                            <constraint firstAttribute="trailing" secondItem="E6c-py-dvH" secondAttribute="trailing" id="brT-qF-Rdk"/>
+                            <constraint firstItem="tnx-rc-95S" firstAttribute="leading" secondItem="GBj-4O-Whc" secondAttribute="leading" id="cGf-LE-hzb"/>
+                            <constraint firstItem="R5W-V8-6lY" firstAttribute="top" secondItem="RLh-bf-1c3" secondAttribute="top" id="fDn-zw-Oo2"/>
+                            <constraint firstItem="GBj-4O-Whc" firstAttribute="bottom" secondItem="k9G-sQ-3KG" secondAttribute="bottom" constant="20" id="ggH-Be-d2r"/>
+                            <constraint firstItem="u5d-u1-dah" firstAttribute="leading" secondItem="GBj-4O-Whc" secondAttribute="leading" constant="20" id="hf3-Bg-MsH"/>
+                            <constraint firstAttribute="bottom" secondItem="E6c-py-dvH" secondAttribute="bottom" id="kLb-BI-xJ4"/>
+                            <constraint firstItem="u5d-u1-dah" firstAttribute="centerY" secondItem="RLh-bf-1c3" secondAttribute="centerY" id="lh0-lG-Bja"/>
+                            <constraint firstItem="OtC-a3-AN3" firstAttribute="centerY" secondItem="RLh-bf-1c3" secondAttribute="centerY" id="lrK-eX-h6V"/>
+                            <constraint firstAttribute="bottom" secondItem="R5W-V8-6lY" secondAttribute="bottom" id="poH-DX-LIv"/>
+                            <constraint firstItem="E6c-py-dvH" firstAttribute="leading" secondItem="RLh-bf-1c3" secondAttribute="leading" id="wEL-Op-yTe"/>
+                            <constraint firstItem="GBj-4O-Whc" firstAttribute="trailing" secondItem="tnx-rc-95S" secondAttribute="trailing" id="yUU-ir-Rk1"/>
+                            <constraint firstItem="k9G-sQ-3KG" firstAttribute="centerX" secondItem="RLh-bf-1c3" secondAttribute="centerX" id="yxc-BY-ruB"/>
+                            <constraint firstItem="GBj-4O-Whc" firstAttribute="trailing" secondItem="QeR-xU-ScN" secondAttribute="trailing" constant="10" id="z3b-Mb-60i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GBj-4O-Whc"/>
+                    </view>
+                    <connections>
+                        <outlet property="actionButtonContainer" destination="OtC-a3-AN3" id="ML4-fk-3eP"/>
+                        <outlet property="actionContainerRightMarginConstraint" destination="QNc-cF-97c" id="xlm-JM-qCI"/>
+                        <outlet property="addBarrierButton" destination="1gK-0P-GaW" id="FXb-tC-Pgz"/>
+                        <outlet property="addConeButton" destination="u8Q-uN-sh8" id="uUU-hj-nkx"/>
+                        <outlet property="addTireButton" destination="HOm-hO-j1q" id="hB8-vl-eTe"/>
+                        <outlet property="avengerCarButton" destination="XCM-co-qpH" id="CpR-PB-ZoM"/>
+                        <outlet property="avengerCarGroup" destination="bby-eK-Cgf" id="IEi-5q-vRn"/>
+                        <outlet property="blurView" destination="R5W-V8-6lY" id="oF2-lD-Srf"/>
+                        <outlet property="carButtonContainer" destination="k9G-sQ-3KG" id="fUw-3F-AaI"/>
+                        <outlet property="carContainerBottomMarginContainer" destination="ggH-Be-d2r" id="04t-aO-5O0"/>
+                        <outlet property="defenderCarButton" destination="08c-w9-fAW" id="f5f-Zs-76F"/>
+                        <outlet property="defenderCarGroup" destination="ivb-My-77Q" id="SPr-Wi-4Yi"/>
+                        <outlet property="leftAnalogJoystick" destination="qXI-rG-2YG" id="gmT-Ch-RHh"/>
+                        <outlet property="leftAnalogJoystickBottomMarginConstraint" destination="2Vm-4I-7Lw" id="qC6-Uw-Mat"/>
+                        <outlet property="leftAnalogJoystickLeftMarginConstraint" destination="31I-tT-FCx" id="L8y-Yv-JdH"/>
+                        <outlet property="leftAnalogJoystickWidthConstraint" destination="Cie-bT-s0j" id="fXC-hj-Dzf"/>
+                        <outlet property="objectButtonContainer" destination="u5d-u1-dah" id="YE0-M4-ecp"/>
+                        <outlet property="objectContainerLeftMarginConstraint" destination="hf3-Bg-MsH" id="sZT-1m-qIn"/>
+                        <outlet property="removeObjectButton" destination="K85-Ls-qn5" id="fzN-qW-wHX"/>
+                        <outlet property="rightAnalogJoystick" destination="QeR-xU-ScN" id="GAE-or-AuD"/>
+                        <outlet property="rightAnalogJoystickBottomMarginConstraint" destination="FlV-dm-2oQ" id="z1J-fK-68a"/>
+                        <outlet property="rightAnalogJoystickRightMarginConstraint" destination="z3b-Mb-60i" id="Gyb-Bh-VRC"/>
+                        <outlet property="rightAnalogJoystickWidthConstraint" destination="SuQ-wl-Jyx" id="Z7r-vd-y5m"/>
+                        <outlet property="sceneView" destination="E6c-py-dvH" id="Gr4-Uw-Z4A"/>
+                        <outlet property="switchMuteSoundButton" destination="2kG-Wf-Xjq" id="vP0-Bs-PPt"/>
+                        <outlet property="switchRaceButton" destination="M42-7w-UCI" id="vBx-RV-qkz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.221889055472268" y="98.400000000000006"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="analogstick_background_left" width="97" height="97"/>
+        <image name="analogstick_background_right" width="97" height="97"/>
+        <image name="analogstick_button" width="41" height="41"/>
+        <image name="avenger" width="30" height="30"/>
+        <image name="avenger_active" width="48" height="48"/>
+        <image name="barrier" width="30" height="30"/>
+        <image name="cone" width="30" height="30"/>
+        <image name="defender" width="30" height="30"/>
+        <image name="defender_active" width="48" height="48"/>
+        <image name="mute" width="30" height="30"/>
+        <image name="mute_active" width="48" height="48"/>
+        <image name="race" width="30" height="30"/>
+        <image name="race_active" width="48" height="48"/>
+        <image name="refresh" width="20" height="23"/>
+        <image name="refresh_pressed" width="20" height="23"/>
+        <image name="remove_template" width="48" height="48"/>
+        <image name="remove_template_active" width="48" height="48"/>
+        <image name="remove_template_pressed" width="48" height="48"/>
+        <image name="ring" width="48" height="48"/>
+        <image name="ring_pressed" width="48" height="48"/>
+        <image name="sound" width="30" height="30"/>
+        <image name="tire" width="30" height="30"/>
+    </resources>
+</document>
