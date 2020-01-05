@@ -556,7 +556,7 @@ class ViewController: UIViewController, AnalogJoystickDelegate, VirtualObjectInt
     func didTapObjectForRemove(object: VirtualObject) {
         removeObject(object.root)
         if !hasObjects() && removeObjectButton.isSelected {
-            removeObjectButtonPressed(removeObjectButton)
+            removeObjectButtonPressed(removeObjectButton!)
         }
     }
     

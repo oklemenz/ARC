@@ -50,7 +50,7 @@ class VirtualObjectLoader {
     }
     
     func removeVirtualObject(_ object: VirtualObject) {        
-        if let objectIndex = loadedObjects.index(of: object) {
+        if let objectIndex = loadedObjects.firstIndex(of: object) {
             removeVirtualObject(at: objectIndex)
         }
     }

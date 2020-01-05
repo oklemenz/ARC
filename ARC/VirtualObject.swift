@@ -58,7 +58,7 @@ class VirtualObject: SCNReferenceNode {
      
      - Tag: VirtualObjectSetPosition
      */
-    func setPosition(_ newPosition: float3, relativeTo cameraTransform: matrix_float4x4, smoothMovement: Bool) {
+    func setPosition(_ newPosition: SIMD3<Float>, relativeTo cameraTransform: matrix_float4x4, smoothMovement: Bool) {
         let cameraWorldPosition = cameraTransform.translation
         var positionOffsetFromCamera = newPosition - cameraWorldPosition
         

@@ -14,7 +14,7 @@ public extension CGPoint {
     /**
      * Creates a new CGPoint given a CGVector.
      */
-    public init(vector: CGVector) {
+    init(vector: CGVector) {
         self.init(x: vector.dx, y: vector.dy)
     }
     
@@ -22,14 +22,14 @@ public extension CGPoint {
      * Given an angle in radians, creates a vector of length 1.0 and returns the
      * result as a new CGPoint. An angle of 0 is assumed to point to the right.
      */
-    public init(angle: CGFloat) {
+    init(angle: CGFloat) {
         self.init(x: cos(angle), y: sin(angle))
     }
     
     /**
      * Adds (dx, dy) to the point.
      */
-    public mutating func offset(dx: CGFloat, dy: CGFloat) -> CGPoint {
+    mutating func offset(dx: CGFloat, dy: CGFloat) -> CGPoint {
         x += dx
         y += dy
         return self
@@ -38,14 +38,14 @@ public extension CGPoint {
     /**
      * Returns the length (magnitude) of the vector described by the CGPoint.
      */
-    public var mag: CGFloat {
+    var mag: CGFloat {
         return sqrt(x*x + y*y)
     }
     
     /**
      * Returns the squared length of the vector described by the CGPoint.
      */
-    public var magSquared: CGFloat {
+    var magSquared: CGFloat {
         return x*x + y*y
     }
     
@@ -53,7 +53,7 @@ public extension CGPoint {
      * Normalizes the vector described by the CGPoint to length 1.0 and returns
      * the result as a new CGPoint.
      */
-    public var norm: CGPoint {
+    var norm: CGPoint {
         let len = mag
         return len>0 ? self / len : CGPoint.zero
     }
@@ -61,7 +61,7 @@ public extension CGPoint {
     /**
      * Normalizes the vector described by the CGPoint to length 1.0.
      */
-    public mutating func normalize() -> CGPoint {
+    mutating func normalize() -> CGPoint {
         self = norm
         return self
     }
@@ -69,7 +69,7 @@ public extension CGPoint {
     /**
      * Calculates the distance between two CGPoints. Pythagoras!
      */
-    public func distanceTo(_ point: CGPoint) -> CGFloat {
+    func distanceTo(_ point: CGPoint) -> CGFloat {
         return (self - point).mag
     }
     
@@ -77,7 +77,7 @@ public extension CGPoint {
      * Returns the angle in radians of the vector described by the CGPoint.
      * The range of the angle is -π to π, an angle of 0 points to the right.
      */
-    public var angle: CGFloat {
+    var angle: CGFloat {
         return atan2(y, x)
     }
 }
