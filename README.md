@@ -1,4 +1,4 @@
-# AR-RC-Car (ACR)
+# AR-RC-Car (ARC)
 
 AR-RC-Car is a simulation of a Remote-Controlled Car, driving in your real environment via Augmented Reality (AR) technology:
 
