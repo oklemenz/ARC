@@ -1,0 +1,80 @@
+#output {
+    position: fixed;
+}
+
+#car {
+    position:absolute; 
+    left:400px;
+    top:200px; 
+    width:20px; 
+    height:50px;          
+    background-color:grey;
+}
+
+#axleFront {
+    position:absolute; 
+    top:10px;
+    width:20px;
+    height:2px;
+}
+
+#axleFrontTireLeft {
+    position:absolute; 
+    height:10px;
+    width:5px;
+    top:-4px; 
+    left:-5px;
+    background-color:green;
+}
+
+#axleFrontTireRight {
+    position:absolute; 
+    height:10px;
+    width:5px;
+    top:-4px; 
+    right:-5px;
+    background-color:green;
+}
+
+#axleRear {
+    position:absolute; 
+    bottom:10px;
+    width:20px;
+    height:2px;
+}
+
+#axleRearTireLeft {
+    position:absolute; 
+    height:10px;
+    width:5px;
+    bottom:-4px; 
+    left:-5px;
+    background-color:green;
+}
+
+#axleRearTireRight {
+    position:absolute; 
+    height:10px;
+    width:5px;
+    bottom:-4px; 
+    right:-5px;
+    background-color:green;
+}
+
+#wheel {
+    position:absolute; 
+    left:250px;
+    top:10px; 
+    width:50px; 
+    height:50px;          
+    background-color:black;
+}
+
+#mark {
+    position:absolute;
+    left:0px;
+    top:0px; 
+    width:10px; 
+    height:10px;          
+    background-color:red;
+}

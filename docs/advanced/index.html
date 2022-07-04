@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Car Simulation</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+            <div id="car" class="car">
+                <div id="axleFront" class="axle">
+                    <div id="axleFrontTireLeft" class="tire tireLeft"></div>
+                    <div id="axleFrontTireRight" class="tire tireRight"></div>
+                </div>
+                <div id="axleRear" class="axle">
+                    <div id="axleRearTireLeft" class="tire tireLeft"></div>
+                    <div id="axleRearTireRight" class="tire tireRight"></div>
+                </div>
+                <div id="engine"></div>
+            </div>
+            <div id="wheel" class="wheel">
+                <div id="mark" class="mark"></div>
+            </div>
+        </div>
+        <div id="output">
+            <div><label>Speed: </label><label id="speed"></label></div>
+            <div><label>RPM: </label><label id="rpm"></label></div>
+            <div><label>Gear: </label><label id="gear"></label></div>
+            <div><label>LocalAcceleration: </label><label id="localAcceleration"></label></div>
+            <div><label>Acceleration: </label><label id="acceleration"></label></div>
+            <div><label>LocalVelocity: </label><label id="localVelocity"></label></div>
+            <div><label>Velocity: </label><label id="velocity"></label></div>
+            <div><label>SteerAngle: </label><label id="steerAngle"></label></div>
+            <div><label>Throttle: </label><label id="throttle"></label></div>
+            <div><label>Brake: </label><label id="brake"></label></div>
+
+            <div><label>HeadingAngle: </label><label id="headingAngle"></label></div>
+            <div><label>AngularVelocity: </label><label id="angularVelocity"></label></div>
+
+            <div><label>TireFL Weight: </label><label id="tireFLWeight"></label></div>
+            <div><label>TireFR Weight: </label><label id="tireFRWeight"></label></div>
+            <div><label>TireRL Weight: </label><label id="tireRLWeight"></label></div>
+            <div><label>TireRR Weight: </label><label id="tireRRWeight"></label></div>
+
+            <div><label>TireFL Friction: </label><label id="tireFLFriction"></label></div>
+            <div><label>TireFR Friction: </label><label id="tireFRFriction"></label></div>
+            <div><label>TireRL Friction: </label><label id="tireRLFriction"></label></div>
+            <div><label>TireRR Friction: </label><label id="tireRRFriction"></label></div>
+
+            <div><label>TireFL Grip: </label><label id="tireFLGrip"></label></div>
+            <div><label>TireFR Grip: </label><label id="tireFRGrip"></label></div>
+            <div><label>TireRL Grip: </label><label id="tireRLGrip"></label></div>
+            <div><label>TireRR Grip: </label><label id="tireRRGrip"></label></div>
+
+            <div><label>AxleF SlipAngle: </label><label id="axleFSlipAngle"></label></div>
+            <div><label>AxleR SlipAngle: </label><label id="axleRSlipAngle"></label></div>
+
+            <div><label>AxleF Torque: </label><label id="axleFTorque"></label></div>
+            <div><label>AxleR Torque: </label><label id="axleRTorque"></label></div>
+
+            <div><label>AxleF Left Trail: </label><label id="axleFLeftTrail"></label></div>
+            <div><label>AxleF Right Trail: </label><label id="axleFRightTrail"></label></div>
+            <div><label>AxleF Left Trail: </label><label id="axleRLeftTrail"></label></div>
+            <div><label>AxleR Right Trail: </label><label id="axleRRightTrail"></label></div>
+
+            <div><label>TireFL Rotation: </label><label id="tireFLRotation"></label></div>
+            <div><label>TireFR Rotation: </label><label id="tireFRRotation"></label></div>
+            <div><label>TireRL Rotation: </label><label id="tireRLRotation"></label></div>
+            <div><label>TireRR Rotation: </label><label id="tireRRRotation"></label></div>
+
+            <div><label>Direction: </label><label id="direction"></label></div>
+            <div><label>Distance: </label><label id="distance"></label></div>
+            <div><label>Rotation: </label><label id="rotation"></label></div>
+            <div><label>Center Of Gravity: </label><label id="centerOfGravity"></label></div>
+        </div>
+    </body>
+</html>
