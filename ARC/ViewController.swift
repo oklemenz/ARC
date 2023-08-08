@@ -147,6 +147,7 @@ class ViewController: UIViewController, AnalogJoystickDelegate, VirtualObjectInt
    
     @IBOutlet weak var defenderCarGroup: UIStackView!
     @IBOutlet weak var avengerCarGroup: UIStackView!
+    @IBOutlet weak var legoCarGroup: UIStackView!
 
     @IBOutlet weak var defenderCarButton: BlurButton!
     @IBAction func defenderCarButtonPressed(_ sender: Any) {
@@ -160,9 +161,8 @@ class ViewController: UIViewController, AnalogJoystickDelegate, VirtualObjectInt
         } else {
             stopDrivingMode()
         }
-        if avengerCarButton.isSelected {
-            avengerCarButton.isSelected = false
-        }
+        avengerCarButton.isSelected = false
+        legoCarButton.isSelected = false
     }
 
     @IBOutlet weak var avengerCarButton: BlurButton!
@@ -177,9 +177,24 @@ class ViewController: UIViewController, AnalogJoystickDelegate, VirtualObjectInt
         } else {
             stopDrivingMode()
         }
-        if defenderCarButton.isSelected {
-            defenderCarButton.isSelected = false
+        defenderCarButton.isSelected = false
+        legoCarButton.isSelected = false
+    }
+    
+    @IBOutlet weak var legoCarButton: BlurButton!
+    @IBAction func legoCarButtonPressed(_ sender: Any) {
+        legoCarButton.isSelected = !legoCarButton.isSelected
+        if legoCarButton.isSelected {
+            resetDrivingMode()
+            car = VirtualObject.legoCar()
+            car?.delegate = self
+            fourWheelDrive = false
+            startDrivingMode()
+        } else {
+            stopDrivingMode()
         }
+        avengerCarButton.isSelected = false
+        defenderCarButton.isSelected = false
     }
     
     @IBAction func removeObjectButtonPressed(_ sender: Any) {
@@ -209,6 +224,7 @@ class ViewController: UIViewController, AnalogJoystickDelegate, VirtualObjectInt
         stopDrivingMode()
         defenderCarButton.isSelected = false
         avengerCarButton.isSelected = false
+        legoCarButton.isSelected = false
     }
     
     func startDrivingMode() {

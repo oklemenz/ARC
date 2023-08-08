@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina4_7" orientation="landscape">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,9 +23,9 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ac7-7y-dTM">
-                                            <rect key="frame" x="0.0" y="0.0" width="125" height="33"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="32"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="d6V-vA-DSm">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="33"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="250" text="Tracking status" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6b-bh-aZK" userLabel="Messages label">
@@ -82,6 +80,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="wYK-n4-ypp"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aSK-t0-G4r" firstAttribute="top" secondItem="wYK-n4-ypp" secondAttribute="top" id="00T-V7-ZZG"/>
@@ -90,7 +89,6 @@
                             <constraint firstItem="1uT-CF-YpX" firstAttribute="leading" secondItem="wYK-n4-ypp" secondAttribute="leading" constant="16" id="EfQ-ka-33s"/>
                             <constraint firstItem="1uT-CF-YpX" firstAttribute="top" secondItem="aSK-t0-G4r" secondAttribute="top" constant="20" id="J9G-Za-9yG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="wYK-n4-ypp"/>
                     </view>
                     <connections>
                         <outlet property="messageLabel" destination="x6b-bh-aZK" id="103-E5-rNP"/>
@@ -102,7 +100,7 @@
             </objects>
             <point key="canvasLocation" x="793" y="98"/>
         </scene>
-        <!--Delegate-->
+        <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
@@ -260,7 +258,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="k9G-sQ-3KG">
-                                <rect key="frame" x="270.5" y="284" width="126" height="71"/>
+                                <rect key="frame" x="231.5" y="284" width="204" height="71"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ivb-My-77Q">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="71"/>
@@ -303,9 +301,31 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JF2-Vr-HWL">
+                                        <rect key="frame" x="156" y="0.0" width="48" height="71"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kY6-Of-lrk" customClass="BlurButton" customModule="ARC" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                <state key="normal" image="avenger" backgroundImage="ring"/>
+                                                <state key="selected" image="avenger_active" backgroundImage="ring"/>
+                                                <state key="highlighted" image="avenger" backgroundImage="ring_pressed"/>
+                                                <connections>
+                                                    <action selector="legoCarButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="fMG-f3-kSP"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lego" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htU-0d-I9e">
+                                                <rect key="frame" x="0.0" y="53" width="48" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="GBj-4O-Whc"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GBj-4O-Whc" firstAttribute="bottom" secondItem="qXI-rG-2YG" secondAttribute="bottom" constant="10" id="2Vm-4I-7Lw"/>
@@ -330,7 +350,6 @@
                             <constraint firstItem="k9G-sQ-3KG" firstAttribute="centerX" secondItem="RLh-bf-1c3" secondAttribute="centerX" id="yxc-BY-ruB"/>
                             <constraint firstItem="GBj-4O-Whc" firstAttribute="trailing" secondItem="QeR-xU-ScN" secondAttribute="trailing" constant="10" id="z3b-Mb-60i"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="GBj-4O-Whc"/>
                     </view>
                     <connections>
                         <outlet property="actionButtonContainer" destination="OtC-a3-AN3" id="ML4-fk-3eP"/>
@@ -349,6 +368,8 @@
                         <outlet property="leftAnalogJoystickBottomMarginConstraint" destination="2Vm-4I-7Lw" id="qC6-Uw-Mat"/>
                         <outlet property="leftAnalogJoystickLeftMarginConstraint" destination="31I-tT-FCx" id="L8y-Yv-JdH"/>
                         <outlet property="leftAnalogJoystickWidthConstraint" destination="Cie-bT-s0j" id="fXC-hj-Dzf"/>
+                        <outlet property="legoCarButton" destination="kY6-Of-lrk" id="EbA-5I-zPc"/>
+                        <outlet property="legoCarGroup" destination="JF2-Vr-HWL" id="Jnb-oY-Z0I"/>
                         <outlet property="objectButtonContainer" destination="u5d-u1-dah" id="YE0-M4-ecp"/>
                         <outlet property="objectContainerLeftMarginConstraint" destination="hf3-Bg-MsH" id="sZT-1m-qIn"/>
                         <outlet property="removeObjectButton" destination="K85-Ls-qn5" id="fzN-qW-wHX"/>
@@ -366,10 +387,39 @@
             <point key="canvasLocation" x="56.221889055472268" y="98.400000000000006"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="08c-w9-fAW">
+            <size key="intrinsicContentSize" width="48" height="48"/>
+        </designable>
+        <designable name="1gK-0P-GaW">
+            <size key="intrinsicContentSize" width="48" height="48"/>
+        </designable>
+        <designable name="2kG-Wf-Xjq">
+            <size key="intrinsicContentSize" width="48" height="48"/>
+        </designable>
+        <designable name="HOm-hO-j1q">
+            <size key="intrinsicContentSize" width="48" height="48"/>
+        </designable>
+        <designable name="K85-Ls-qn5">
+            <size key="intrinsicContentSize" width="48" height="48"/>
+        </designable>
+        <designable name="M42-7w-UCI">
+            <size key="intrinsicContentSize" width="48" height="48"/>
+        </designable>
+        <designable name="XCM-co-qpH">
+            <size key="intrinsicContentSize" width="48" height="48"/>
+        </designable>
+        <designable name="kY6-Of-lrk">
+            <size key="intrinsicContentSize" width="48" height="48"/>
+        </designable>
+        <designable name="u8Q-uN-sh8">
+            <size key="intrinsicContentSize" width="48" height="48"/>
+        </designable>
+    </designables>
     <resources>
-        <image name="analogstick_background_left" width="97" height="97"/>
-        <image name="analogstick_background_right" width="97" height="97"/>
-        <image name="analogstick_button" width="41" height="41"/>
+        <image name="analogstick_background_left" width="97.5" height="97.5"/>
+        <image name="analogstick_background_right" width="97.5" height="97.5"/>
+        <image name="analogstick_button" width="41.5" height="41"/>
         <image name="avenger" width="30" height="30"/>
         <image name="avenger_active" width="48" height="48"/>
         <image name="barrier" width="30" height="30"/>

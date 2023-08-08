@@ -208,6 +208,14 @@ extension VirtualObject {
         }
         return _avengerCar!
     }
+    
+    static var _legoCar: LegoCarVirtualObject?
+    static func legoCar() -> LegoCarVirtualObject {
+        if _legoCar == nil {
+            _legoCar = LegoCarVirtualObject(type: "lego", url:Bundle.main.url(forResource: "Models.scnassets/lego/lego.scn", withExtension: nil)!)!
+        }
+        return _legoCar!
+    }
 }
 
 extension Collection where Iterator.Element == Float {
